@@ -283,6 +283,77 @@ Notes:
 - series labels and colors are written into the generated chart XML.
 - `openpyxl.load_workbook()` does not always round-trip those chart details back into high-level objects cleanly, so XML-level output can be more reliable than object readback for verification.
 
+### Embedding Charts
+
+Charts are embedded by adding objects to the sheet's `charts` array. They are not stored in `workbook.json`.
+
+At render time, Herndon:
+
+1. writes the sheet data
+2. builds the chart from the referenced ranges
+3. anchors the chart at the chart's `anchor` cell
+4. sizes it using `w` and `h` in inches
+
+Minimal example inside a sheet file:
+
+```json
+{
+  "sheet_id": "overview",
+  "title": "Overview",
+  "freeze_rows": 0,
+  "freeze_cols": 0,
+  "zoom": 100,
+  "column_widths": {},
+  "row_heights": {},
+  "cells": [],
+  "ranges": [
+    {
+      "anchor": "A1",
+      "data": [
+        ["Category", "Amount"],
+        ["Rent", 2400],
+        ["Payroll", 8500],
+        ["Travel", 900]
+      ]
+    }
+  ],
+  "merges": [],
+  "tables": [],
+  "charts": [
+    {
+      "chart_id": "expense_pie",
+      "chart_type": "pie",
+      "title": "Spend by Category",
+      "anchor": "D2",
+      "w": 7,
+      "h": 5,
+      "series": [
+        {
+          "label": "Amount",
+          "values": "'Overview'!$B$2:$B$4",
+          "categories": "'Overview'!$A$2:$A$4",
+          "color": "#0F766E"
+        }
+      ],
+      "show_legend": true,
+      "legend_position": "r",
+      "show_data_labels": true,
+      "show_percent_labels": true
+    }
+  ]
+}
+```
+
+Important details:
+
+- `anchor` is the top-left placement cell for the chart object on the sheet.
+- `values` and `categories` should reference cells that will exist after range/cell writes complete.
+- sheet-qualified ranges should usually use the displayed sheet title, for example `'Overview'!$B$2:$B$4`.
+- charts are rendered after tables and merges.
+- if you move the source data, you must update the chart references yourself.
+
+The same pattern applies to line, bar, column, and scatter charts. The only major difference is the `chart_type` and optional stacking or axis settings.
+
 ### Images
 
 Images are embedded using cell-anchored `cells` entries with `image_path`.
