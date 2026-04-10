@@ -1,0 +1,41 @@
+{
+  "name": "brand",
+  "colors": {
+    "background": "#FFFFFF",
+    "text": "#1F2937",
+    "accent": "#0F766E",
+    "header_fill": "#E6FFFB"
+  },
+  "fonts": {
+    "default": "Aptos",
+    "heading": "Aptos Display"
+  },
+  "styles": {
+    "title": {
+      "font_name": "Aptos Display",
+      "font_size": 14,
+      "bold": true,
+      "color": "#1F2937"
+    },
+    "header": {
+      "font_name": "Aptos",
+      "font_size": 11,
+      "bold": true,
+      "color": "#1F2937",
+      "fill": "#E6FFFB",
+      "border_bottom": "thin"
+    },
+    "currency": {
+      "font_name": "Aptos",
+      "font_size": 11,
+      "number_format": "$#,##0.00"
+    },
+    "currency_total": {
+      "font_name": "Aptos",
+      "font_size": 11,
+      "bold": true,
+      "number_format": "$#,##0.00",
+      "border_top": "thin"
+    }
+  }
+}

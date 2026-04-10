@@ -1,0 +1,74 @@
+{
+  "sheet_id": "stacked_mix",
+  "title": "Stacked Mix",
+  "freeze_rows": 1,
+  "freeze_cols": 0,
+  "zoom": 100,
+  "column_widths": {
+    "A": 14,
+    "B": 14,
+    "C": 14,
+    "D": 14
+  },
+  "row_heights": {},
+  "cells": [],
+  "ranges": [
+    {
+      "anchor": "A1",
+      "data": [
+        ["Month", "Rent", "Payroll", "Software"],
+        ["Jan", 2400, 8500, 1200],
+        ["Feb", 2400, 8500, 1250],
+        ["Mar", 2400, 8500, 1300],
+        ["Apr", 2400, 8500, 1280]
+      ],
+      "row_styles": {
+        "0": "header"
+      },
+      "col_styles": {
+        "1": "currency",
+        "2": "currency",
+        "3": "currency"
+      }
+    }
+  ],
+  "merges": [],
+  "tables": [],
+  "charts": [
+    {
+      "chart_id": "stacked_bar",
+      "chart_type": "bar",
+      "title": "Spend Mix by Month",
+      "anchor": "F2",
+      "w": 8,
+      "h": 5,
+      "percent_stacked": true,
+      "legend_position": "b",
+      "show_data_labels": true,
+      "x_axis_title": "Share of Spend",
+      "y_axis_title": "Month",
+      "series": [
+        {
+          "label": "Rent",
+          "values": "'Stacked Mix'!$B$2:$B$5",
+          "categories": "'Stacked Mix'!$A$2:$A$5",
+          "color": "#2563EB"
+        },
+        {
+          "label": "Payroll",
+          "values": "'Stacked Mix'!$C$2:$C$5",
+          "categories": "'Stacked Mix'!$A$2:$A$5",
+          "color": "#059669"
+        },
+        {
+          "label": "Software",
+          "values": "'Stacked Mix'!$D$2:$D$5",
+          "categories": "'Stacked Mix'!$A$2:$A$5",
+          "color": "#D97706"
+        }
+      ],
+      "show_legend": true,
+      "value_format": "$#,##0"
+    }
+  ]
+}

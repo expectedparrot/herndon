@@ -1,0 +1,90 @@
+{
+  "sheet_id": "overview",
+  "title": "Overview",
+  "freeze_rows": 2,
+  "freeze_cols": 0,
+  "zoom": 100,
+  "column_widths": {
+    "A": 22,
+    "B": 16,
+    "D": 18,
+    "E": 18,
+    "F": 18,
+    "G": 18,
+    "H": 18
+  },
+  "row_heights": {
+    "1": 22
+  },
+  "cells": [
+    {
+      "cell": "A1",
+      "value": "2026 Expenditures",
+      "style": "title"
+    },
+    {
+      "cell": "H1",
+      "image_path": "assets/logo.png",
+      "w": 1.6,
+      "h": 0.55
+    },
+    {
+      "cell": "B8",
+      "formula": "=SUM(B3:B7)",
+      "style": "currency_total"
+    }
+  ],
+  "ranges": [
+    {
+      "anchor": "A2",
+      "data": [
+        ["Category", "Amount"],
+        ["Rent", 2400],
+        ["Payroll", 8500],
+        ["Software", 1250],
+        ["Marketing", 2100],
+        ["Travel", 900],
+        ["Total", null]
+      ],
+      "row_styles": {
+        "0": "header"
+      },
+      "col_styles": {
+        "1": "currency"
+      }
+    }
+  ],
+  "merges": [],
+  "tables": [
+    {
+      "table_id": "expense_table",
+      "name": "ExpenseData",
+      "ref": "A2:B8",
+      "header_row": true,
+      "auto_filter": true,
+      "style": "TableStyleMedium2"
+    }
+  ],
+  "charts": [
+    {
+      "chart_id": "expense_pie",
+      "chart_type": "pie",
+      "title": "Spend by Category",
+      "anchor": "D2",
+      "w": 7,
+      "h": 5,
+      "series": [
+        {
+          "label": "Amount",
+          "values": "'Overview'!$B$3:$B$7",
+          "categories": "'Overview'!$A$3:$A$7",
+          "color": "#0F766E"
+        }
+      ],
+      "show_legend": true,
+      "legend_position": "r",
+      "show_data_labels": true,
+      "show_percent_labels": true
+    }
+  ]
+}

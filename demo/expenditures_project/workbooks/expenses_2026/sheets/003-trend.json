@@ -1,0 +1,56 @@
+{
+  "sheet_id": "trend",
+  "title": "Trend",
+  "freeze_rows": 1,
+  "freeze_cols": 0,
+  "zoom": 100,
+  "column_widths": {
+    "A": 14,
+    "B": 16
+  },
+  "row_heights": {},
+  "cells": [],
+  "ranges": [
+    {
+      "anchor": "A1",
+      "data": [
+        ["Month", "Total Spend"],
+        ["Jan", 12100],
+        ["Feb", 12150],
+        ["Mar", 12200],
+        ["Apr", 12180],
+        ["May", 12310]
+      ],
+      "row_styles": {
+        "0": "header"
+      },
+      "col_styles": {
+        "1": "currency"
+      }
+    }
+  ],
+  "merges": [],
+  "tables": [],
+  "charts": [
+    {
+      "chart_id": "line_trend",
+      "chart_type": "line",
+      "title": "Total Spend Trend",
+      "anchor": "D2",
+      "w": 7,
+      "h": 4,
+      "legend_position": "r",
+      "y_axis_title": "Spend",
+      "series": [
+        {
+          "label": "Total Spend",
+          "values": "'Trend'!$B$2:$B$6",
+          "categories": "'Trend'!$A$2:$A$6",
+          "color": "#7C3AED"
+        }
+      ],
+      "show_legend": true,
+      "value_format": "$#,##0"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "herndon"
+version = "0.1.0"
+description = "Agent-focused CLI for deterministic Excel workbook generation"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "typer>=0.23.1",
+  "pydantic>=2.12.5",
+  "openpyxl>=3.1.5",
+  "Pillow>=10.4.0",
+]
+
+[project.scripts]
+herndon = "herndon.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

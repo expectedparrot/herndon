@@ -1,0 +1,8 @@
+{
+  "workbook_id": "expenses_2026",
+  "source_path": "workbooks/expenses_2026/workbook.json",
+  "output_path": ".herndon/builds/expenses_2026/expenses_2026.xlsx",
+  "rendered_at": "2026-04-10T00:57:15Z",
+  "sheet_count": 4,
+  "theme": "brand"
+}

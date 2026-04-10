@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "workbook_id": "expenses_2026",
+  "title": "Expenses 2026",
+  "theme": "brand",
+  "sheets": [
+    "sheets/001-overview.json",
+    "sheets/002-stacked-mix.json",
+    "sheets/003-trend.json",
+    "sheets/004-histogram-bins.json"
+  ],
+  "build": {
+    "output": ".herndon/builds/expenses_2026/expenses_2026.xlsx"
+  }
+}

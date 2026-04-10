@@ -1,0 +1,54 @@
+{
+  "sheet_id": "histogram_bins",
+  "title": "Histogram Bins",
+  "freeze_rows": 1,
+  "freeze_cols": 0,
+  "zoom": 100,
+  "column_widths": {
+    "A": 18,
+    "B": 12
+  },
+  "row_heights": {},
+  "cells": [
+    {
+      "cell": "D1",
+      "value": "Histogram note: native histogram charts are not supported by the current backend; this sheet uses pre-binned data as a workaround."
+    }
+  ],
+  "ranges": [
+    {
+      "anchor": "A1",
+      "data": [
+        ["Spend Bucket", "Count"],
+        ["$0-$999", 1],
+        ["$1,000-$1,999", 1],
+        ["$2,000-$2,999", 2],
+        ["$8,000-$8,999", 1]
+      ],
+      "row_styles": {
+        "0": "header"
+      }
+    }
+  ],
+  "merges": [],
+  "tables": [],
+  "charts": [
+    {
+      "chart_id": "histogram_like",
+      "chart_type": "column",
+      "title": "Spend Distribution by Bin",
+      "anchor": "D3",
+      "w": 7,
+      "h": 4,
+      "series": [
+        {
+          "label": "Count",
+          "values": "'Histogram Bins'!$B$2:$B$5",
+          "categories": "'Histogram Bins'!$A$2:$A$5"
+        }
+      ],
+      "show_legend": false,
+      "value_format": "0"
+    }
+  ]
+}

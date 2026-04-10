@@ -1,0 +1,65 @@
+{
+  "project_root": "__PROJECT_ROOT__",
+  "workbook": {
+    "version": 1,
+    "workbook_id": "demo",
+    "title": "Demo Finance Book",
+    "theme": "brand",
+    "sheets": [
+      "sheets/001-summary.json"
+    ],
+    "build": {
+      "output": ".herndon/builds/demo/finance-demo.xlsx"
+    }
+  },
+  "theme": {
+    "name": "brand",
+    "colors": {},
+    "fonts": {},
+    "styles": {
+      "header": {
+        "font_name": null,
+        "font_size": null,
+        "bold": true,
+        "italic": null,
+        "underline": null,
+        "color": null,
+        "fill": null,
+        "number_format": null,
+        "alignment": null,
+        "vertical_alignment": null,
+        "wrap_text": null,
+        "border_top": null,
+        "border_bottom": null,
+        "border_left": null,
+        "border_right": null,
+        "border_color": null
+      }
+    }
+  },
+  "sheets": [
+    {
+      "path": "__PROJECT_ROOT__/workbooks/demo/sheets/001-summary.json",
+      "sheet_id": "summary",
+      "title": "Summary",
+      "freeze_rows": 0,
+      "freeze_cols": 0,
+      "zoom": 100,
+      "column_widths": {},
+      "row_heights": {},
+      "cells": [
+        {
+          "cell": "A1",
+          "value": "Revenue",
+          "style": "header"
+        }
+      ],
+      "ranges": [],
+      "merges": [],
+      "tables": [],
+      "charts": [],
+      "assets": []
+    }
+  ],
+  "referenced_assets": []
+}
